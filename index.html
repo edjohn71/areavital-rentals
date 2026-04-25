@@ -8,7 +8,7 @@
   <!-- ══════ SEO BÁSICO ══════ -->
   <title>Apartamentos Amoblados en Laureles, Medellín | Área Vital Rentals</title>
   <meta name="description"
-    content="Alquiler de apartamentos amoblados en Laureles, Medellín. Estadías cortas y largas con WiFi, cocina y todo incluido. Reserva tu hospedaje en la mejor zona de Medellín." />
+    content="Alquiler de apartamentos amoblados en Laureles, Medellín. Estadías cortas y largas con WIFI, cocina y todo incluido. Reserva tu hospedaje en la mejor zona de Medellín." />
   <meta name="keywords"
     content="apartamentos amoblados Medellín, apartamentos en Laureles, Airbnb Medellín, alquiler por días Medellín, hospedaje en Medellín, apartamentos turísticos Laureles, estadías cortas Medellín, alojamiento Laureles" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -55,31 +55,181 @@
   <link rel="dns-prefetch" href="https://connect.facebook.net" />
 
   <!-- Pre-carga de la imagen del hero (mejora LCP) -->
-  <link rel="preload" as="image"
-    href="https://images.unsplash.com/photo-1512250431446-d0b4b57b27ec?auto=format&fit=crop&w=1920&q=80" />
-
-  <!-- Fonts + CSS -->
+  <link rel="preload" as="image" <!-- Fonts + CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 
-  <style>
-    .hero {
-      min-height: 0vh !important;
-    }
-  </style>
-
   <!-- JSON-LD, GA4 y Meta Pixel van aquí (los te paso abajo) -->
-</head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRD9XDRBN4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config', 'G-TRD9XDRBN4');
+  <!-- ══════ STRUCTURED DATA (Schema.org) ══════ -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LodgingBusiness",
+      "@id": "https://areavitalrentals.com/#business",
+      "name": "Área Vital Rentals",
+      "description": "Alquiler de apartamentos amoblados en Laureles, Medellín. Estadías cortas y largas con todo incluido.",
+      "url": "https://areavitalrentals.com/",
+      "telephone": "+57 313 652 4687",
+      "image": "https://areavitalrentals.com/img/og-cover.jpg",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Barrio Laureles",
+        "addressLocality": "Medellín",
+        "addressRegion": "Antioquia",
+        "postalCode": "050031",
+        "addressCountry": "CO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 6.2442,
+        "longitude": -75.5812
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Medellín"
+      },
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "WIFI", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Cocina equipada", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Amoblado", "value": true }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "7",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "sameAs": [
+        "https://wa.me/573136524687"
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Apartamentos disponibles en Laureles",
+      "itemListElement": [
+        {
+          "@type": "Apartment",
+          "position": 1,
+          "name": "Laureles · 401 San Antonio",
+          "description": "Apartamento amoblado para hasta 10 personas, a pasos del Segundo Parque de Laureles.",
+          "numberOfRooms": 4,
+          "occupancy": { "@type": "QuantitativeValue", "maxValue": 10 },
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "WIFI", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "4 habitaciones", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "3 baños", "value": true }
+          ]
+        },
+        {
+          "@type": "Apartment",
+          "position": 2,
+          "name": "Laureles · 601 San Antonio",
+          "description": "Apartamento amoblado para 9 personas, bien iluminado, cerca del Segundo Parque de Laureles.",
+          "numberOfRooms": 4,
+          "occupancy": { "@type": "QuantitativeValue", "maxValue": 9 }
+        },
+        {
+          "@type": "Apartment",
+          "position": 3,
+          "name": "Laureles · 301 Acacias",
+          "description": "Apartamento amoblado para hasta 6 personas, cerca de la Av. 80 y el Éxito de Laureles.",
+          "numberOfRooms": 2,
+          "occupancy": { "@type": "QuantitativeValue", "maxValue": 6 }
+        },
+        {
+          "@type": "Apartment",
+          "position": 4,
+          "name": "Laureles · 401 Acacias",
+          "description": "Apartamento amoblado para 6 personas, cerca de la Calle 35 y Viva Laureles.",
+          "numberOfRooms": 2,
+          "occupancy": { "@type": "QuantitativeValue", "maxValue": 6 }
+        },
+        {
+          "@type": "Apartment",
+          "position": 5,
+          "name": "Laureles · 501 Acacias",
+          "description": "Apartamento amoblado para 2 personas, cerca del Éxito y Segundo Parque.",
+          "numberOfRooms": 1,
+          "occupancy": { "@type": "QuantitativeValue", "maxValue": 2 }
+        },
+        {
+          "@type": "Apartment",
+          "position": 6,
+          "name": "Laureles · 601 Acacias",
+          "description": "Apartamento funcional para 2 personas, cerca del Éxito de Laureles.",
+          "numberOfRooms": 1,
+          "occupancy": { "@type": "QuantitativeValue", "maxValue": 2 }
+        },
+        {
+          "@type": "Apartment",
+          "position": 7,
+          "name": "Laureles · 001 Acacias",
+          "description": "Estudio cómodo para 1–2 personas, cerca de la Calle 35.",
+          "numberOfRooms": 1,
+          "occupancy": { "@type": "QuantitativeValue", "maxValue": 2 }
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo hago una reserva?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puedes reservar directamente desde Airbnb haciendo clic en 'Ver fechas y reservar'. Allí verás el calendario actualizado y opciones de pago seguras."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Los apartamentos están completamente amoblados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, todos los apartamentos están totalmente equipados con cocina, WIFI, ropa de cama y todo lo necesario para una estadía cómoda."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué incluye el alojamiento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Incluye WIFI, cocina equipada, utensilios, ropa de cama, toallas y espacios diseñados para una estadía cómoda."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Aceptan estadías largas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, contamos con opciones para estadías largas. Escríbenos por WhatsApp para más información."
+          }
+        }
+      ]
+    }
+  ]
+}
 </script>
+  <!-- ══════ GOOGLE ANALYTICS 4 ══════ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TRD9XDRBN4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TRD9XDRBN4', {
+      page_title: document.title,
+      page_location: window.location.href,
+      // Envía tiempo real en página a los 10s (opcional pero útil)
+      engagement_time_msec: 100
+    });
+  </script>
+</head>
 
 <body>
-
   <!-- ── NAVBAR ── -->
   <header class="navbar">
     <div class="container navbar__inner">
@@ -90,7 +240,8 @@
       <nav class="navbar__links">
         <a href="#propiedades">Propiedades</a>
         <a href="#contacto">Contacto</a>
-        <a href="https://wa.me/573136524687" target="_blank" rel="noopener" class="btn btn--outline btn--sm">
+        <a href="https://wa.me/573136524687?text=Hola%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20las%20propiedades%20disponibles.%20%C2%BFMe%20puedes%20ayudar%20con%20informaci%C3%B3n%3F"
+          target="_blank" rel="noopener" class="btn btn--outline btn--sm" onclick="gtag('event','click_whatsapp')">
           WhatsApp
         </a>
       </nav>
@@ -100,37 +251,36 @@
   <!-- ── HERO ── -->
   <section class="hero" id="inicio">
     <div class="hero__media">
-      <img src="https://images.unsplash.com/photo-1512250431446-d0b4b57b27ec?auto=format&fit=crop&w=1920&q=80"
-        alt="Apartamento dúplex en Belén Medellín cerca al parque" class="hero__image" />
-
+      <img src="img/hero.webp" alt="Apartamentos en Laureles Medellín vista panorámica de la ciudad"
+        class="hero__image" />
       <div class="hero__overlay"></div>
     </div>
     <div class="container hero__content">
       <span class="hero__badge">En Laureles · Medellín</span>
-      <h1 class="hero__title fade-up delay-1">Apartamentos amoblados listos para reservar</h1>
-      <p class="hero__subtitle fade-up delay-2"> Vive Medellín en una ubicación privilegiada, con espacios cómodos,
-        modernos y
-        totalmente equipados.</p>
-      <div class="hero__actions fade-up delay-3">
-        <a href="#propiedades" class="btn btn--primary btn--lg" id="hero-cta-disponibilidad">
-          Ver fechas disponibles
-        </a>
-        <a href="https://wa.me/573136524687" target="_blank" rel="noopener" class="btn btn--ghost btn--lg"
-          id="hero-cta-whatsapp">
-          <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-            <path
-              d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.857L.057 23.215a.75.75 0 0 0 .916.919l5.453-1.479A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.694 9.694 0 0 1-4.951-1.356l-.355-.212-3.676.996.993-3.605-.232-.372A9.694 9.694 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
-          </svg>
-          Escribir por WhatsApp
-        </a>
-      </div>
+      <h1 class="hero__title fade-up delay-1">
+        Apartamentos en Laureles listos para tu viaje en Medellín
+      </h1>
+
+      <p class="hero__subtitle fade-up delay-2">
+        Hospédate en la mejor zona de Medellín, con apartamentos amplios,
+        seguros y totalmente equipados. Ideal para familias y grupos.
+      </p>
+      <a href="#propiedades" class="btn btn--primary btn--lg" id="hero-cta-disponibilidad">
+        Ver apartamentos disponibles
+      </a>
+      <a href="https://wa.me/573136524687?text=Hola,%20quiero%20consultar%20disponibilidad%20de%20apartamentos%20en%20Laureles.%20Somos%20__%20personas%20y%20buscamos%20para%20fechas%20aproximadas.%20¿Me%20puedes%20ayudar?"
+        target="_blank" rel="noopener" class="btn btn--whatsapp btn--lg" id="hero-cta-whatsapp">
+        <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+          <path
+            d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.857L.057 23.215a.75.75 0 0 0 .916.919l5.453-1.479A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.694 9.694 0 0 1-4.951-1.356l-.355-.212-3.676.996.993-3.605-.232-.372A9.694 9.694 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
+        </svg>
+        Escribir por WhatsApp
+      </a>
     </div>
-    <!-- scroll indicator -->
-    <div class="hero__scroll-hint" aria-hidden="true">
-      <span>↓</span>
     </div>
+
   </section>
   <!-- ── LAURELES BENEFITS ── -->
   <section class="laureles">
@@ -176,11 +326,97 @@
           <h3>Seguridad y comodidad</h3>
           <p>Zona residencial segura, con excelente calidad de vida y entorno tranquilo.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── VIVE LAURELES (carrusel manual de experiencias del barrio) ── -->
+  <section class="vive">
+    <div class="container">
+
+      <div class="section-header fade-up">
+        <h2 class="section-title">Vive Laureles como un local</h2>
+        <p class="section-subtitle">Cafés, parques, restaurantes y todo a pocos pasos de tu estadía</p>
+      </div>
+
+      <div class="vive__carousel" id="vive-carousel">
+
+        <button class="vive__arrow vive__arrow--prev" id="vive-prev" type="button" aria-label="Anterior">
+          ‹
+        </button>
+
+        <div class="vive__viewport">
+          <div class="vive__grid" id="vive-grid">
+
+            <!-- Cafés y restaurantes -->
+            <article class="vive__card">
+              <img class="vive__card-img" loading="lazy" src="img/vive_laureles_1_cafes.webp"
+                alt="Cafés y restaurantes en Laureles" />
+              <span class="vive__card-label">Cafés y restaurantes ☕</span>
+            </article>
+
+            <!-- Calles caminables -->
+            <article class="vive__card">
+              <img class="vive__card-img" loading="lazy" src="img/vive_laureles_2_calle.webp"
+                alt="Calles caminables de Laureles" />
+              <span class="vive__card-label">Calles caminables 🚶</span>
+            </article>
+
+            <!-- Parques -->
+            <article class="vive__card">
+              <img class="vive__card-img" loading="lazy" src="img/vive_laureles_3_parque.webp"
+                alt="Parques de Laureles" />
+              <span class="vive__card-label">Parques 🌳</span>
+            </article>
+
+            <!-- Vida nocturna -->
+            <article class="vive__card">
+              <img class="vive__card-img" loading="lazy" src="img/vive_laureles_4_vidanocturna.webp"
+                alt="Vida nocturna en Medellín" />
+              <span class="vive__card-label">Vida nocturna 🌙</span>
+            </article>
+
+            <!-- Ambiente local -->
+            <article class="vive__card">
+              <img class="vive__card-img" loading="lazy" src="img/vive_laureles_5_ambientelocal.webp"
+                alt="Ambiente local y gastronomía" />
+              <span class="vive__card-label">Ambiente local 🍽️</span>
+            </article>
+
+            <!-- Zona tranquila -->
+            <article class="vive__card">
+              <img class="vive__card-img" loading="lazy" src="img/vive_laureles_6_zonatranquila.webp"
+                alt="Zona residencial tranquila" />
+              <span class="vive__card-label">Zona tranquila 🏡</span>
+            </article>
+
+            <!-- Cultura y arte -->
+            <article class="vive__card">
+              <img class="vive__card-img" loading="lazy" src="img/vive_laureles_7_cultura.webp" alt="Cultura y arte" />
+              <span class="vive__card-label">Cultura y arte 🎨</span>
+            </article>
+
+            <!-- Movilidad fácil -->
+            <article class="vive__card">
+              <img class="vive__card-img" loading="lazy" src="img/vive_laureles_8_movilidadfacil.webp"
+                alt="Movilidad fácil en Laureles" />
+              <span class="vive__card-label">Movilidad fácil 🚲</span>
+            </article>
+
+          </div>
+        </div>
+
+        <button class="vive__arrow vive__arrow--next" id="vive-next" type="button" aria-label="Siguiente">
+          ›
+        </button>
 
       </div>
 
     </div>
   </section>
+
+
   <!-- ── STATS STRIP ── -->
   <section class="stats">
     <div class="container stats__inner">
@@ -220,8 +456,8 @@
         <!-- Card 1 -->
         <article class="property-card fade-up" id="card-401-San-Antonio">
           <div class="property-card__media">
-            <img src="img/401_St_Antonio.jpg" class="property-card__img">
-            <span class=" property-card__badge">Disponible</span>
+            <img src="img/401_st_antonio.webp" class="property-card__img">
+            <span class="property-card__badge property-card__badge--hot">🔥 Alta demanda</span>
           </div>
           <div class="property-card__body">
             <h3 class="property-card__title">Laureles · 401 San Antonio</h3>
@@ -230,74 +466,105 @@
             <div class="property-card__meta">
               <span>🛏 4 hab.</span>
               <span>🛁 3 baños</span>
-              <span>📶 WiFi</span>
+              <span>📶 WIFI</span>
             </div>
-            <a href="#" class="btn btn--primary btn--block" id="btn-401-San-Antonio">Quiero reservar</a>
+            <a href="https://es-l.airbnb.com/rooms/915209430603750218" target="_blank" rel="noopener"
+              class="btn btn--primary btn--block" id="btn-401-San-Antonio">Ver disponibilidad</a>
+            <p class="property-card__cta-note">
+              Reserva segura en Airbnb
+            </p>
           </div>
         </article>
 
         <!-- Card 2 -->
         <article class="property-card fade-up" id="card-601-San-Antonio">
-          <div class="property-card__media">
-            <img src="img/601.jpg" class="property-card__img">
-            <span class="property-card__badge">Disponible</span>
-          </div>
-          <div class="property-card__body">
-            <h3 class="property-card__title">Laureles · 601 San Antonio</h3>
-            <p class="property-card__subtitle">Ideal para 9 personas, bien iluminado.
-              Cerca del Segundo Parque de Laureles.</p>
-            <div class="property-card__meta">
-              <span>🛏 4 hab.</span>
-              <span>🛁 3 baños</span>
-              <span>📶 WiFi</span>
-            </div>
-            <a href="#" class="btn btn--primary btn--block" id="btn-601-San-Antonio">Quiero reservar</a>
-          </div>
-        </article>
 
-        <!-- Card 3 -->
+          <div class="property-card__media">
+            <img src="img/601_st_antonio.webp" class="property-card__img" alt="Apartamento en Laureles 601 San Antonio">
+
+            <span class="property-card__badge property-card__badge--hot">
+              🔥 Más reservado
+            </span>
+          </div>
+
+          <div class="property-card__body">
+
+            <h3 class="property-card__title">
+              Laureles · 601 San Antonio
+            </h3>
+
+            <p class="property-card__subtitle">
+              Ideal para 9 personas, bien iluminado. Cerca del Segundo Parque de Laureles.
+            </p>
+            <p class="property-card__price">
+              Desde <strong>$180.000</strong> / noche
+            </p>
+
+            <div class="property-card__meta">
+              <span>🛏️ 4 hab.</span>
+              <span>🛁 3 baños</span>
+              <span>📶 WIFI</span>
+
+            </div>
+
+            <a href="https://www.airbnb.com/rooms/1072383876254991388" target="_blank" rel="noopener"
+              class="btn btn-primary btn-block" id="btn-601-San-Antonio">
+              Ver disponibilidad
+            </a>
+            <p class="property-card__cta-note">
+              Reserva segura en Airbnb
+            </p>
+
+          </div>
+          <!-- Card 3 -->
+        </article>
         <article class="property-card fade-up" id="card-301-Acacias">
           <div class="property-card__media">
-            <img src="img/3_302_Acacias.jpg" class="property-card__img">
-            <span class="property-card__badge">Disponible</span>
+            <img src="img/302_acacias.webp" class="property-card__img">
           </div>
           <div class="property-card__body">
             <h3 class="property-card__title">Laureles · 301 Acacias</h3>
             <p class="property-card__subtitle">Para hasta 6 personas, muy conveniente.
               Cerca de la Av. 80 y el Éxito de Laureles.</p>
             <div class="property-card__meta">
-              <span>🛏 2 hab.</span>
+              <span>🛏 2 hab..</span>
               <span>🛁 2 baños</span>
               <span>🌇 Parqueadero</span>
             </div>
-            <a href="#" class="btn btn--primary btn--block" id="btn-301-Acacias">Quiero reservar</a>
+            <a href="https://www.airbnb.com/rooms/1172711239168003109" target="_blank" rel="noopener"
+              class="btn btn--primary btn--block" id="btn-301-Acacias">Ver disponibilidad</a>
+            <p class="property-card__cta-note">
+              Reserva segura en Airbnb
+            </p>
           </div>
         </article>
 
         <!-- Card 4 -->
         <article class="property-card fade-up" id="card-401-Acacias">
           <div class="property-card__media">
-            <img src="img/401_Acacias.jpg" class="property-card__img">
-            <span class="property-card__badge">Disponible</span>
+            <img src="img/401_acacias.webp" class="property-card__img">
           </div>
           <div class="property-card__body">
             <h3 class="property-card__title">Laureles · 401 Acacias</h3>
-            <p class="property-card__subtitle">Para hasta 6 personas, cómodo y funcional.
-              Cerca de la Calle 35 y Viva Laureles.</p>
+            <p class="property-card__subtitle">Para 6 personas, cómodo y funcional.
+              Cerca de Viva Laureles y la Consolata.</p>
             <div class="property-card__meta">
               <span>🛏 2 hab.</span>
               <span>🛁 2 baños</span>
               <span>🤫 Tranquilo</span>
             </div>
-            <a href="#" class="btn btn--primary btn--block" id="btn-401-Acacias">Quiero reservar</a>
+            <a href="https://es-l.airbnb.com/rooms/905172897812793397" target="_blank" rel="noopener"
+              class="btn btn--primary btn--block" id="btn-401-Acacias">Ver disponibilidad</a>
+            <p class="property-card__cta-note">
+              Reserva segura en Airbnb
+            </p>
           </div>
         </article>
 
         <!-- Card 5 -->
         <article class="property-card fade-up" id="card-501-Acacias">
           <div class="property-card__media">
-            <img src="img/601_Consolata.jpg" class="property-card__img">
-            <span class="property-card__badge">Disponible</span>
+            <img src="img/601_consolata.webp" class="property-card__img">
           </div>
           <div class="property-card__body">
             <h3 class="property-card__title">Laureles · 501 Acacias</h3>
@@ -306,17 +573,20 @@
             <div class="property-card__meta">
               <span>🛏 1 hab.</span>
               <span>🛁 1 baño</span>
-              <span>📶 Wifi</span>
+              <span>📶 WIFI</span>
             </div>
-            <a href="#" class="btn btn--primary btn--block" id="btn-501-Acacias">Quiero reservar</a>
+            <a href="https://es-l.airbnb.com/rooms/850847318569354709" target="_blank" rel="noopener"
+              class="btn btn--primary btn--block" id="btn-501-Acacias">Ver disponibilidad</a>
+            <p class="property-card__cta-note">
+              Reserva segura en Airbnb
+            </p>
           </div>
         </article>
 
         <!-- Card 6 -->
         <article class="property-card fade-up" id="card-601-Acacias">
           <div class="property-card__media">
-            <img src="img/602_Consolata.jpg" class="property-card__img">
-            <span class="property-card__badge">Disponible</span>
+            <img src="img/602_consolata.webp" class="property-card__img">
           </div>
           <div class="property-card__body">
             <h3 class="property-card__title">Laureles · 601 Acacias</h3>
@@ -325,17 +595,20 @@
             <div class="property-card__meta">
               <span>🛏 1 hab.</span>
               <span>🛁 1 baño</span>
-              <span>📶 WiFi</span>
+              <span>📶 WIFI</span>
             </div>
-            <a href="#" class="btn btn--primary btn--block" id="btn-601-Acacias">Quiero reservar</a>
+            <a href="https://es-l.airbnb.com/rooms/898837443348715100" target="_blank" rel="noopener"
+              class="btn btn--primary btn--block" id="btn-601-Acacias">Ver disponibilidad</a>
+            <p class="property-card__cta-note">
+              Reserva segura en Airbnb
+            </p>
           </div>
         </article>
 
         <!-- Card 7 -->
         <article class="property-card fade-up" id="card-001-Acacias">
           <div class="property-card__media">
-            <img src="img/000_acacias.jpg" class="property-card__img">
-            <span class="property-card__badge">Disponible</span>
+            <img src="img/000_acacias.webp" class="property-card__img">
           </div>
           <div class="property-card__body">
             <h3 class="property-card__title">Laureles · 001 Acacias</h3>
@@ -344,54 +617,89 @@
             <div class="property-card__meta">
               <span>🛏 1 hab.</span>
               <span>🛁 1 baño</span>
-              <span>📶 WiFi</span>
+              <span>📶 WIFI</span>
             </div>
-            <a href="#" class="btn btn--primary btn--block" id="btn-001-Acacias">Quiero reservar</a>
-          </div>
-        </article>
-
-        <!-- Card 8 -->
-        <article class="property-card fade-up" id="card-Palmacaoba">
-          <div class="property-card__media">
-            <img src="img/Palmacaoba.jpg" class="property-card__img">
-            <span class="property-card__badge">Disponible</span>
-          </div>
-          <div class="property-card__body">
-            <h3 class="property-card__title">Palmacaoba · Conjunto recreacional</h3>
-            <p class="property-card__subtitle">Para hasta 10 personas, ideal para relajarte y divertirte.
-              En Tolú Coveñas.</p>
-            <div class="property-card__meta">
-              <span>🛏 Estudio</span>
-              <span>🛁 1 baño</span>
-              <span>📶 WiFi</span>
-            </div>
-            <a href="#" class="btn btn--primary btn--block" id="btn-Palmacaoba">Quiero reservar</a>
-          </div>
-        </article>
-
-        <!-- Card 9 -->
-        <article class="property-card fade-up" id="card-flex-habitat">
-          <div class="property-card__media">
-            <img src="img/901_FlexHabitat.jpg" alt="Flex Habitat, Laureles" class="property-card__img" loading="lazy">
-            <span class="property-card__badge property-card__badge--soon">Próximamente</span>
-          </div>
-          <div class="property-card__body">
-            <h3 class="property-card__title">Laureles · Flex Habitat</h3>
-            <p class="property-card__subtitle"> Un nuevo espacio para grupos.
-              Excelente ubicación en un solo lugar conveniente.
+            <a href="https://es-l.airbnb.com/rooms/941203544290624354" target="_blank" rel="noopener"
+              class="btn btn--primary btn--block" id="btn-001-Acacias">Ver disponibilidad</a>
+            <p class="property-card__cta-note">
+              Reserva segura en Airbnb
             </p>
-            <div class="property-card__meta">
-              <span>🛏 9 hab.</span>
-              <span>🛁 9 baño</span>
-              <span>📶 WiFi</span>
-            </div>
-            <a href="#" class="btn btn--primary btn--block btn--disabled" id="btn-flex-habitat"
-              aria-disabled="true">Próximamente</a>
           </div>
         </article>
+        <!-- Card 8 Palmacaoba -->
+        <article class="property-card fade-up" id="card-palmacaoba">
 
-      </div><!-- /.properties__grid -->
-    </div>
+          <div class="property-card__media">
+            <img src="img/palmacaoba.webp" class="property-card__img" alt="Palmacaoba Tolú Coveñas">
+
+            <span class="property-card__badge property-card__badge--warning">
+              🔥 Últimas fechas disponibles
+            </span>
+          </div>
+
+          <div class="property-card__body">
+
+            <h3 class="property-card__title">
+              Palmacaoba · Conjunto recreacional
+            </h3>
+
+            <p class="property-card__subtitle">
+              Disponible en fechas específicas. Ideal para disfrutar en familia en Tolú Coveñas.
+            </p>
+
+            <div class="property-card__meta">
+              <span>🛏️ 3 hab</span>
+              <span>🛁 2 baños</span>
+              <span>🏖️ Piscinas</span>
+              <span>🌊 Mar</span>
+            </div>
+
+            <a href="https://www.airbnb.com.co/rooms/840515992071287938" target="_blank" rel="noopener"
+              class="btn btn--primary btn--block">
+              Ver disponibilidad
+            </a>
+            <p class="property-card__cta-note">
+              Reserva segura en Airbnb
+            </p>
+
+          </div>
+
+        </article>
+        <!-- Card 9-->
+        <article class="property-card fade-up" id="card-flexhab.itat">
+
+          <div class="property-card__media">
+            <img src="img/flexhabitat.webp" class="property-card__img">
+
+            <span class="property-card__badge property-card__badge--soon">
+              🚧 Próxima apertura
+            </span>
+          </div>
+
+          <div class="property-card__body">
+
+            <h3 class="property-card__title">
+              Laureles · Flex habitat
+            </h3>
+
+            <p class="property-card__subtitle">
+              Un nuevo espacio para grupos. Excelente ubicación en un solo lugar conveniente.
+            </p>
+
+            <div class="property-card__meta">
+              <span>🛏️ 9 hab.</span>
+              <span>🛁 9 baños</span>
+              <span>📶 WIFI</span>
+            </div>
+
+            <a href="https://wa.me/573136524687?text=Hola,%20quiero%20que%20me%20avisen%20cuando%20Flex%20habitat%20esté%20disponible.%20¿Me%20pueden%20compartir%20más%20información%20y%20cómo%20funciona?"
+              target="_blank" rel="noopener" class="btn btn--ghost btn--block" id="btn-flexhabitat">
+              Avisarme cuando esté disponible
+            </a>
+
+          </div>
+        </article>
+      </div>
   </section>
   <!-- ── REVIEWS CARRUSEL ── -->
   <section class="reviews">
@@ -631,7 +939,7 @@
             <span class="faq__icon" aria-hidden="true"></span>
           </button>
           <div class="faq__answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
-            <p>Sí, todos los apartamentos están totalmente equipados con cocina, WiFi, ropa de cama y todo lo necesario
+            <p>Sí, todos los apartamentos están totalmente equipados con cocina, WIFI, ropa de cama y todo lo necesario
               para una estadía cómoda.</p>
           </div>
         </div>
@@ -642,7 +950,7 @@
             <span class="faq__icon" aria-hidden="true"></span>
           </button>
           <div class="faq__answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
-            <p>Incluye WiFi, cocina equipada, utensilios, ropa de cama, toallas y espacios diseñados para una estadía
+            <p>Incluye WIFI, cocina equipada, utensilios, ropa de cama, toallas y espacios diseñados para una estadía
               cómoda.</p>
           </div>
         </div>
@@ -679,32 +987,34 @@
         <p class="cta__subtitle">Consulta disponibilidad en segundos y asegura tu estadía hoy.</p>
       </div>
       <div class="cta__actions">
-        <a href="#propiedades" class="btn btn--primary btn-lg" id="cta-ver-disponibilidad">
-          Ver disponibilidad
+        <a href="#propiedades" class="btn btn--primary btn--lg" id="cta-ver-disponibilidad">
+          Ver apartamentos disponibles
         </a>
 
-        <a href="https://wa.me/5733136524687" target="_blank" rel="noopener" class="btn btn--whatsapp btn-lg"
-          id="cta-whatsapp">
-          <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            ...
-          </svg>
-          Escribir por WhatsApp
-        </a>
+        <a href="https://wa.me/573136524687?text=Hola%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20las%20propiedades%20disponibles.%20%C2%BFMe%20puedes%20ayudar%20con%20informaci%C3%B3n%3F"
+          target="_blank" rel="noopener" class="btn btn--whatsapp btn--lg" id="cta-whatsapp"
+          onclick="gtag('event','click_whatsapp')">Consultar por WhatsApp</a>
       </div>
     </div>
   </section>
 
-  <!-- ── FOOTER ── -->
   <footer class="footer">
     <div class="container footer__inner">
       <span class="footer__brand">▲ Área Vital Rentals</span>
       <span class="footer__copy">© 2026 · Laureles, Medellín, Colombia</span>
+      <a href="https://www.aviwebs.com/" target="_blank" rel="noopener" class="footer__credit-link"
+        aria-label="Diseñado por AVIWEBS">
+        <span class="footer__credit-text">Diseñado por</span>
+        <img src="img/aviwebs-logo.png" alt="AVIWEBS" class="footer__credit-logo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" />
+        <span class="footer__credit-fallback" style="display:none;">AVIWEBS</span>
+      </a>
     </div>
   </footer>
-
   <!-- ── FLOATING WHATSAPP ── -->
-  <a href="https://wa.me/573136524687" target="_blank" rel="noopener" class="fab-whatsapp" id="fab-whatsapp"
-    aria-label="Contactar por WhatsApp">
+  <a href="https://wa.me/573136524687?text=Hola%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20las%20propiedades%20disponibles.%20%C2%BFMe%20puedes%20ayudar%20con%20informaci%C3%B3n%3F"
+    target="_blank" rel="noopener" class="fab-whatsapp" id="fab-whatsapp" aria-label="Contactar por WhatsApp"
+    onclick="gtag('event','click_whatsapp')">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path
         d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
@@ -745,19 +1055,7 @@
       });
     })();
   </script>
-  <script>
-    const elements = document.querySelectorAll('.fade-up');
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    });
-
-    elements.forEach(el => observer.observe(el));
-  </script>
   <script>
     const elements = document.querySelectorAll('.fade-up');
 
@@ -1106,140 +1404,178 @@
       });
     })();
   </script>
+
+  <!-- ══════ TRACKING DE EVENTOS (comportamiento del usuario) ══════ -->
   <script>
-    /* ───────────────────────────────────────────────
-       REVIEWS — Expandir / Contraer inteligente
-       • Auto-cierre a los 5s
-       • Solo 1 review abierto a la vez
-       • Toggle manual (click para cerrar)
-       • El hover pausa el cierre automático
-       ─────────────────────────────────────────────── */
     (function () {
-      const reviews = document.querySelectorAll('.review');
-      if (!reviews.length) return;
+      'use strict';
 
-      const COLLAPSED_MAX = 4.65; // em — debe coincidir con el CSS
-      const AUTO_CLOSE_MS = 5000; // tiempo antes de cerrar (5 segundos)
-
-      // Estado global
-      let openReview = null;      // la tarjeta actualmente expandida
-      let closeTimer = null;      // timer del auto-cierre
-      let isHovering = false;     // ¿el mouse está sobre la review abierta?
-
-      // ── Utilidades de expansión / contracción ──
-      function expand(review) {
-        const text = review.querySelector('.review__text');
-        const toggle = review.querySelector('.review__toggle');
-        text.style.maxHeight = text.scrollHeight + 'px';
-        review.classList.add('is-expanded');
-        toggle.textContent = 'Ver menos';
-      }
-
-      function collapse(review) {
-        const text = review.querySelector('.review__text');
-        const toggle = review.querySelector('.review__toggle');
-
-        // Fijar altura actual → forzar reflow → animar a la altura colapsada
-        text.style.maxHeight = text.scrollHeight + 'px';
-        void text.offsetHeight;
-        text.style.maxHeight = COLLAPSED_MAX + 'em';
-        review.classList.remove('is-expanded');
-        toggle.textContent = 'Seguir leyendo';
-      }
-
-      // ── Timer de auto-cierre ──
-      function clearCloseTimer() {
-        if (closeTimer) {
-          clearTimeout(closeTimer);
-          closeTimer = null;
+      // Helper unificado: envía a GA4 y a Meta Pixel a la vez
+      function trackEvent(eventName, params) {
+        params = params || {};
+        // GA4
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params);
+        }
+        // Meta Pixel (custom event)
+        if (typeof fbq === 'function') {
+          fbq('trackCustom', eventName, params);
         }
       }
 
-      function scheduleAutoClose() {
-        clearCloseTimer();
-        // No programar si el usuario tiene el mouse encima
-        if (isHovering || !openReview) return;
-
-        closeTimer = setTimeout(function () {
-          if (openReview && !isHovering) {
-            collapse(openReview);
-            openReview = null;
+      // ── 1. SCROLL DEPTH (25 / 50 / 75 / 100%) ──
+      const scrollMarks = { 25: false, 50: false, 75: false, 100: false };
+      function checkScrollDepth() {
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if (docHeight <= 0) return;
+        const scrolled = (window.scrollY / docHeight) * 100;
+        [25, 50, 75, 100].forEach(function (mark) {
+          if (!scrollMarks[mark] && scrolled >= mark) {
+            scrollMarks[mark] = true;
+            trackEvent('scroll_depth', { depth_percent: mark });
           }
-        }, AUTO_CLOSE_MS);
+        });
+      }
+      let scrollTimeout;
+      window.addEventListener('scroll', function () {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(checkScrollDepth, 200);
+      }, { passive: true });
+
+      // ── 2. TIEMPO EN PÁGINA (engagement real: 30s / 60s / 180s) ──
+      const timeMarks = [30, 60, 180];
+      const startTime = Date.now();
+      timeMarks.forEach(function (seconds) {
+        setTimeout(function () {
+          trackEvent('time_on_page', { seconds: seconds });
+        }, seconds * 1000);
+      });
+
+      // Al salir: enviar tiempo total
+      window.addEventListener('beforeunload', function () {
+        const totalSeconds = Math.round((Date.now() - startTime) / 1000);
+        trackEvent('session_end', { total_seconds: totalSeconds });
+      });
+
+      // ── 3. CLICKS EN BOTONES CLAVE ──
+      // WhatsApp (hero, navbar, CTA, floating button)
+      document.querySelectorAll('a[href*="wa.me"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+          const location = link.id || link.className || 'unknown';
+          trackEvent('whatsapp_click', { button_location: location });
+          // Evento estándar de Meta Pixel para lead
+          if (typeof fbq === 'function') fbq('track', 'Contact');
+        });
+      });
+
+      // "Ver disponibilidad" (todas las tarjetas de propiedades)
+      document.querySelectorAll('[id^="btn-"]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const property = btn.id.replace('btn-', '');
+          trackEvent('reservation_click', { property: property });
+          if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: property });
+        });
+      });
+
+      // CTA del hero
+      const heroCta = document.getElementById('hero-cta-disponibilidad');
+      if (heroCta) {
+        heroCta.addEventListener('click', function () {
+          trackEvent('hero_cta_click', { cta: 'ver_fechas_disponibles' });
+        });
       }
 
-      // ── Detección de textos que requieren "Seguir leyendo" ──
-      function refreshToggleVisibility(review) {
-        const text = review.querySelector('.review__text');
-        const toggle = review.querySelector('.review__toggle');
-        if (!text || !toggle) return;
-
-        // Si el texto no está recortado, ocultamos el botón
-        const needs = text.scrollHeight - text.clientHeight > 2;
-        toggle.hidden = !needs;
+      // CTA final
+      const ctaFinal = document.getElementById('cta-ver-disponibilidad');
+      if (ctaFinal) {
+        ctaFinal.addEventListener('click', function () {
+          trackEvent('final_cta_click', { cta: 'ver_disponibilidad' });
+        });
       }
 
-      // ── Setup por tarjeta ──
-      reviews.forEach(function (review) {
-        const toggle = review.querySelector('.review__toggle');
-        const text = review.querySelector('.review__text');
-        if (!toggle || !text) return;
+      // ── 4. VIEWS DE PROPIEDADES (qué tarjetas ve cada usuario) ──
+      const propertyCards = document.querySelectorAll('.property-card');
+      const viewedCards = new Set();
+      if ('IntersectionObserver' in window && propertyCards.length) {
+        const cardObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting && !viewedCards.has(entry.target.id)) {
+              viewedCards.add(entry.target.id);
+              const property = entry.target.id.replace('card-', '');
+              trackEvent('property_view', { property: property });
+            }
+          });
+        }, { threshold: 0.5 }); // 50% visible
+        propertyCards.forEach(function (card) { cardObserver.observe(card); });
+      }
 
-        // Mostrar/ocultar botón según si el texto está recortado
-        refreshToggleVisibility(review);
-
-        // Click en "Seguir leyendo / Ver menos"
-        toggle.addEventListener('click', function (e) {
-          e.stopPropagation();
-          const isThisOpen = review.classList.contains('is-expanded');
-
-          // Cerrar la que estuviera abierta (si no es esta)
-          if (openReview && openReview !== review) {
-            collapse(openReview);
-          }
-
-          if (isThisOpen) {
-            // Toggle: cerrar la misma
-            collapse(review);
-            openReview = null;
-            clearCloseTimer();
-          } else {
-            // Abrir esta y programar auto-cierre
-            expand(review);
-            openReview = review;
-            scheduleAutoClose();
-          }
-        });
-
-        // Hover: pausa el auto-cierre mientras el usuario está leyendo
-        review.addEventListener('mouseenter', function () {
-          if (openReview === review) {
-            isHovering = true;
-            clearCloseTimer();
-          }
-        });
-
-        review.addEventListener('mouseleave', function () {
-          if (openReview === review) {
-            isHovering = false;
-            scheduleAutoClose(); // reinicia el contador de 5s
-          }
+      // ── 5. INTERACCIÓN CON FAQ ──
+      document.querySelectorAll('.faq__question').forEach(function (question, idx) {
+        question.addEventListener('click', function () {
+          const text = question.querySelector('span')?.textContent || 'faq_' + idx;
+          trackEvent('faq_open', { question: text });
         });
       });
 
-      // Recalcular visibilidad del botón al cargar fuentes / redimensionar
-      window.addEventListener('load', function () {
-        reviews.forEach(refreshToggleVisibility);
+      // ── 6. INTERACCIÓN CON REVIEWS ──
+      document.querySelectorAll('.review__toggle').forEach(function (btn, idx) {
+        btn.addEventListener('click', function () {
+          trackEvent('review_expand', { review_index: idx });
+        });
       });
 
-      window.addEventListener('resize', function () {
-        reviews.forEach(refreshToggleVisibility);
-        // Si hay una review abierta, reajustar su altura
-        if (openReview) {
-          const text = openReview.querySelector('.review__text');
-          text.style.maxHeight = text.scrollHeight + 'px';
-        }
+      // Ver sección de reviews (llegó a leer opiniones)
+      const reviewsSection = document.querySelector('.reviews');
+      if (reviewsSection && 'IntersectionObserver' in window) {
+        const reviewsObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              trackEvent('reviews_section_view');
+              reviewsObserver.disconnect();
+            }
+          });
+        }, { threshold: 0.3 });
+        reviewsObserver.observe(reviewsSection);
+      }
+
+      // ── 7. CLICK EN LINKS DE LA NAVBAR ──
+      document.querySelectorAll('.navbar__links a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          trackEvent('nav_click', { link_text: link.textContent.trim() });
+        });
       });
+
+    })();
+  </script>
+
+  <!-- ══════ VIVE LAURELES — CARRUSEL MANUAL (sin autoplay) ══════ -->
+  <script>
+    (function () {
+      const grid = document.getElementById('vive-grid');
+      const prevBtn = document.getElementById('vive-prev');
+      const nextBtn = document.getElementById('vive-next');
+      if (!grid || !prevBtn || !nextBtn) return;
+
+      // Calcula el ancho de una tarjeta + gap para avanzar de a 1
+      function cardStep() {
+        const card = grid.querySelector('.vive__card');
+        if (!card) return 280;
+        const gap = parseFloat(getComputedStyle(grid).columnGap || '20') || 20;
+        return card.getBoundingClientRect().width + gap;
+      }
+
+      // Click flecha izquierda → retrocede una tarjeta
+      prevBtn.addEventListener('click', function () {
+        grid.scrollBy({ left: -cardStep(), behavior: 'smooth' });
+      });
+
+      // Click flecha derecha → avanza una tarjeta
+      nextBtn.addEventListener('click', function () {
+        grid.scrollBy({ left: cardStep(), behavior: 'smooth' });
+      });
+
+      // Swipe / scroll horizontal nativo: ya funciona vía CSS (overflow-x: auto)
+      // No autoplay, no hover-scroll: 100% manual.
     })();
   </script>
 </body>
