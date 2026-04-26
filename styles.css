@@ -818,7 +818,8 @@ a {
 
 .laureles__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 300px));
+  justify-content: center;
   gap: 10px;
   margin-top: 0;
 }
@@ -1564,16 +1565,22 @@ img.review__avatar {
 ───────────────────────────── */
 .property-card__badge {
   position: absolute;
-  top: 14px;
-  left: 14px;
-  font-size: 0.75rem;
+  top: 20px;
+  left: 16px;
+
+  font-size: 0.75rem !important;
+  padding: 4px 10px !important;
+
   font-weight: 600;
-  padding: 0.25rem 0.6rem;
-  border-radius: var(--radius-pill);
-  /* Sin background por defecto: cada modificador define el suyo */
+  border-radius: 8px !important;
+  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  letter-spacing: 0.1px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
-
-
 
 /* ALTA DEMANDA — rojo */
 .property-card__badge--hot {
@@ -1693,4 +1700,596 @@ img.review__avatar {
   margin: 2px 0 0;
   line-height: 1.3;
   font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =============================================
+   AJUSTES GLOBALES (desktop + mobile)
+   ============================================= */
+
+/* 5. Botones — base global */
+.btn {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* 6. Labels (badges) — más legibles */
+/*BORRAR JOHN DE 
+.property-card__badge {
+  font-size: 13px;
+  padding: 6px 10px;
+  font-weight: 600;
+  border-radius: 999px;
+}*/
+
+/* 9. FAQ — pregunta dominante, respuesta secundaria */
+.faq__question {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.faq__answer {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* 1. FOOTER — nueva estructura (footer-main + footer-credit) */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 20px 16px;
+  padding-bottom: 28px;
+  /* 👈 AQUÍ es donde va */
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-main div {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* BLOQUE PRINCIPAL */
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  /* compacto, limpio */
+  line-height: 1.2;
+  font-size: 12.5px;
+}
+
+/* PRIMERA LÍNEA (MARCA) */
+.footer-main>div:first-child {
+  font-weight: 700;
+  font-size: 13.5px;
+  color: var(--color-text-primary);
+}
+
+/* BLOQUE AVIWEBS */
+.footer-credit {
+  margin-top: 16px;
+  /* aire perfecto entre bloques */
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* RESALTAR AVIWEBS */
+.footer-credit strong {
+  font-weight: 600;
+}
+
+color: var(--color-text-muted);
+text-decoration: none;
+transition: color 0.2s ease;
+}
+
+.footer-credit a:hover {
+  color: var(--color-text-primary);
+}
+
+.footer-credit strong {
+  color: var(--color-text-primary);
+  font-weight: 700;
+}
+
+/* 3. HEADER — espaciado base */
+.navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* =============================================
+   MOBILE OPTIMIZATIONS (≤ 768px)
+   ============================================= */
+@media (max-width: 768px) {
+
+
+  /* Espacio superior global */
+  body {
+    padding-top: 6px;
+  }
+
+  /* HEADER compacto en mobile */
+  .navbar {
+    padding: 8px 12px !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  .navbar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0;
+    gap: 6px;
+  }
+
+  .navbar__logo {
+    font-size: 0.9rem;
+    line-height: 1 !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar__links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    line-height: 1;
+  }
+
+  .navbar__links a {
+    font-size: 0.78rem;
+    padding: 4px 5px;
+    line-height: 1;
+  }
+
+  /* ─────────────────────────────────────────────
+     2. HERO BUTTONS — texto 16px, igual altura que CTA
+  ───────────────────────────────────────────── */
+  .hero__actions,
+  .cta__actions {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  .hero__actions .btn,
+  .hero__actions .btn--lg,
+  .hero__actions .btn.btn--primary,
+  .hero__actions .btn.btn--whatsapp,
+  .cta__actions .btn,
+  .cta__actions .btn--lg,
+  .cta__actions .btn.btn--primary,
+  .cta__actions .btn.btn--whatsapp {
+    font-size: 16px !important;
+    /* texto legible */
+    line-height: 1.2 !important;
+    /* permite 2 líneas */
+    padding: 0.7rem 1.1rem !important;
+    min-height: 46px !important;
+    width: 100% !important;
+    border-radius: 999px !important;
+    box-sizing: border-box !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    letter-spacing: 0 !important;
+    font-weight: 600 !important;
+    white-space: normal !important;
+    /* permite 2 líneas */
+    text-align: center;
+  }
+
+  /* SVG dentro de botones hero/cta */
+  .hero__actions .btn .btn__icon,
+  .hero__actions .btn svg,
+  .cta__actions .btn .btn__icon,
+  .cta__actions .btn svg {
+    width: 18px !important;
+    height: 18px !important;
+    flex-shrink: 0;
+    margin: 0 !important;
+  }
+
+  /* HERO sección */
+  .hero {
+    padding-top: 50px;
+    padding-bottom: 22px;
+    min-height: auto;
+  }
+
+  .hero__title {
+    font-size: 1.55rem;
+    line-height: 1.18;
+    margin-bottom: 8px;
+  }
+
+  .hero__subtitle {
+    font-size: 0.88rem;
+    line-height: 1.45;
+    margin-bottom: 20px;
+  }
+
+  /* ─────────────────────────────────────────────
+     4. ANCHO CONSISTENTE — todas las secciones 320px
+  ───────────────────────────────────────────── */
+  .properties {
+    padding: 16px 0 22px;
+  }
+
+  .properties__grid {
+    gap: 14px;
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin-inline: auto;
+  }
+
+  /* 8. CARDS — sin hueco entre imagen y contenido */
+  .property-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 4px 10px rgba(0, 0, 0, 0.06);
+    padding: 0;
+    margin: 0;
+  }
+
+  .property-card__media {
+    position: relative;
+    /* 🔥 ESTA es la clave */
+
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block;
+    line-height: 0;
+    font-size: 0;
+    border: 0;
+  }
+
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block;
+  line-height: 0;
+  font-size: 0;
+  border: 0;
+}
+
+.property-card__img,
+.property-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0;
+  vertical-align: top;
+}
+
+.property-card__body {
+  padding: 10px 12px 10px !important;
+  margin: 0;
+  gap: 2px;
+}
+
+.property-card__title {
+  font-size: 0.95rem;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.property-card__subtitle {
+  font-size: 0.8rem;
+  line-height: 1.35;
+  margin: 0 0 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.property-card__meta {
+  font-size: 0.72rem;
+  gap: 6px;
+  padding-block: 4px;
+  margin-block: 2px;
+}
+
+.property-card__body .btn {
+  padding: 0.45rem 0.9rem;
+  font-size: 14px;
+  margin-top: 4px;
+  min-height: 36px;
+}
+
+.property-card__cta-note {
+  font-size: 0.66rem;
+  margin: 1px 0 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+/* 6. LABELS en mobile */
+.property-card__badge {
+  font-size: 13px;
+  padding: 6px 10px;
+  top: 10px;
+  left: 10px;
+}
+
+/* 7. VIVE LAURELES — mismo ancho que cards (320px) */
+.vive {
+  padding: 12px 0 18px;
+}
+
+.vive .container {
+  max-width: 320px;
+  margin-inline: auto;
+  padding-inline: 0;
+}
+
+.vive .section-header {
+  margin-bottom: 8px;
+}
+
+.vive__card {
+  aspect-ratio: 4 / 3;
+  max-height: 150px;
+}
+
+.vive__card-label {
+  font-size: 11px;
+  padding: 3px 8px;
+  left: 8px;
+  bottom: 8px;
+}
+
+/* STATS */
+.stats {
+  padding: 8px 0 14px;
+}
+
+.stats__inner {
+  gap: 12px;
+}
+
+.stat__number {
+  font-size: 1.18rem;
+}
+
+.stat__label {
+  font-size: 0.72rem;
+}
+
+/* REVIEWS — mismo ancho que cards */
+.reviews {
+  padding: 16px 0 20px;
+}
+
+.reviews .container,
+.reviews__container {
+  max-width: 320px;
+  margin-inline: auto;
+  padding-inline: 0;
+}
+
+.review {
+  padding: 14px;
+  font-size: 0.85rem;
+}
+
+/* 9. FAQ */
+.faq {
+  padding: 14px 0 24px;
+}
+
+.faq__list {
+  gap: 5px;
+}
+
+.faq__item {
+  padding: 8px 14px;
+}
+
+.faq__question {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+  padding-block: 4px;
+}
+
+.faq__answer {
+  font-size: 14px;
+  line-height: 1.4;
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
+
+/* WHATSAPP FLOTANTE */
+.fab-whatsapp {
+  width: 42px;
+  height: 42px;
+  bottom: 90px;
+  right: 18px;
+  box-shadow: 0 3px 10px rgba(37, 211, 102, 0.32);
+}
+
+.fab-whatsapp svg {
+  width: 21px;
+  height: 21px;
+}
+
+/* CTA FINAL */
+.cta {
+  padding-block: 26px;
+}
+
+.cta__title {
+  font-size: 1.3rem;
+  line-height: 1.22;
+}
+
+.cta__subtitle {
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+/* LAURELES (íconos) */
+.laureles {
+  padding-block: 20px;
+}
+
+.laureles__grid {
+  gap: 10px;
+
+
+}
+
+/* Section header global mobile */
+.section-header {
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+.section-subtitle {
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+/* Contraste sutil */
+.laureles {
+  background: var(--color-surface);
+}
+
+.vive {
+  background: var(--color-bg);
+}
+
+.stats {
+  background: var(--color-bg);
+}
+
+.properties {
+  background: var(--color-surface);
+}
+
+.reviews {
+  background: var(--color-bg);
+}
+
+.faq {
+  background: var(--color-surface);
+}
+
+/* FOOTER — ya queda bien con las reglas globales (flex-column) */
+.footer {
+  padding: 16px 12px 18px;
+}
+}
+
+/* Smartphones pequeños (≤ 380px) */
+@media (max-width: 380px) {
+  .hero__title {
+    font-size: 1.38rem;
+  }
+
+  .hero__actions,
+  .cta__actions {
+    max-width: 260px !important;
+  }
+
+  .property-card__title {
+    font-size: 0.92rem;
+  }
+
+  .property-card__subtitle {
+    font-size: 0.78rem;
+  }
+
+  .vive__card {
+    max-height: 140px;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+  }
+
+  .fab-whatsapp {
+    width: 40px;
+    height: 40px;
+    bottom: 80px;
+    right: 14px;
+  }
+
+  .fab-whatsapp svg {
+    width: 19px;
+    height: 19px;
+  }
+}
+
+/* ===== FIX DEFINITIVO BOTONES HERO ===== */
+
+.hero .btn,
+.hero .btn-primary {
+  padding: 12px 18px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  border-radius: 999px !important;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.hero .btn+.btn {
+  margin-top: 8px !important;
+}
+
+/* ===== FIX FINAL BADGE (forzado) ===== */
+.property-card__badge {
+  border-radius: 6px !important;
+  padding: 2px 8px !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
 }
