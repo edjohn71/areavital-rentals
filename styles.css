@@ -818,7 +818,7 @@ a {
 
 .laureles__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 300px));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   justify-content: center;
   gap: 10px;
   margin-top: 0;
@@ -2292,4 +2292,90 @@ transition: color 0.2s ease;
   padding: 2px 8px !important;
   font-size: 12px !important;
   line-height: 1.2 !important;
+}
+
+/* FIX GRID LAURELES - DESKTOP */
+.laureles_grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+}
+
+/* CONTROL PRO GRID LAURELES */
+
+/* DESKTOP GRANDE → 4 columnas */
+@media (min-width: 1200px) {
+  .laureles_grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+/* TABLET / LAPTOP → 2 columnas */
+@media (max-width: 1199px) {
+  .laureles_grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* MOBILE → 1 columna */
+@media (max-width: 768px) {
+  .laureles_grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* FIX REVIEWS DESKTOP COMPLETO */
+
+@media (min-width: 1024px) {
+
+  /* contenedor principal */
+  #reviews-carousel {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    justify-content: center;
+    gap: 24px;
+    overflow: visible !important;
+  }
+
+  /* cada card */
+  #reviews-carousel .review_card {
+    width: 340px !important;
+    max-width: 340px !important;
+    flex: 0 0 auto;
+  }
+
+}
+
+/* =============================================
+   DESKTOP OVERRIDES (≥ 1024px)
+   Corrige reviews y vive carousel sin afectar mobile
+   ============================================= */
+@media (min-width: 1024px) {
+
+  /* ── REVIEWS — recuperar ancho desktop ── */
+  .reviews .reviews__container {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 40px;
+  }
+
+  /* 3 cards visibles, ancho 300–360px */
+  .reviews .reviews__grid .review {
+    flex: 0 0 calc((100% - 40px) / 3);
+    min-width: 300px;
+    max-width: 360px;
+  }
+
+  /* ── VIVE LAURELES — alineación horizontal correcta ── */
+  .vive .container {
+    max-width: 1100px;
+    margin-inline: auto;
+    padding-inline: 32px;
+  }
+
+  /* 3 cards visibles uniformes, sin comprimir */
+  .vive .vive__grid .vive__card {
+    flex: 0 0 calc((100% - 48px) / 3);
+    aspect-ratio: 4 / 3;
+    max-height: none;
+  }
 }
