@@ -2299,83 +2299,152 @@ transition: color 0.2s ease;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
 }
 
-/* CONTROL PRO GRID LAURELES */
-
-/* DESKTOP GRANDE → 4 columnas */
-@media (min-width: 1200px) {
-  .laureles_grid {
-    grid-template-columns: repeat(4, 1fr) !important;
-  }
-}
-
-/* TABLET / LAPTOP → 2 columnas */
-@media (max-width: 1199px) {
-  .laureles_grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-}
-
-/* MOBILE → 1 columna */
-@media (max-width: 768px) {
-  .laureles_grid {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-/* FIX REVIEWS DESKTOP COMPLETO */
-
-@media (min-width: 1024px) {
-
-  /* contenedor principal */
-  #reviews-carousel {
-    width: 100% !important;
-    max-width: 100% !important;
-    display: flex !important;
-    justify-content: center;
-    gap: 24px;
-    overflow: visible !important;
-  }
-
-  /* cada card */
-  #reviews-carousel .review_card {
-    width: 340px !important;
-    max-width: 340px !important;
-    flex: 0 0 auto;
-  }
-
-}
-
 /* =============================================
-   DESKTOP OVERRIDES (≥ 1024px)
-   Corrige reviews y vive carousel sin afectar mobile
+   SISTEMA RESPONSIVE FINAL — breakpoints explícitos
+   ≥ 1024px → desktop (3-4 columnas)
+   562px – 1023px → tablet (2 columnas)
+   ≤ 561px → mobile (1 columna)
    ============================================= */
+
+/* ─────────────────────────────────────────────
+   DESKTOP (≥ 1024px)
+───────────────────────────────────────────── */
 @media (min-width: 1024px) {
 
-  /* ── REVIEWS — recuperar ancho desktop ── */
+  /* BENEFICIOS — 4 columnas */
+  .laureles .laureles__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    max-width: 1100px;
+    margin-inline: auto;
+  }
+
+  /* PROPIEDADES — 3 columnas */
+  .properties .properties__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin-inline: auto;
+  }
+
+  /* REVIEWS — 3 cards visibles */
   .reviews .reviews__container {
     max-width: 1200px;
     margin-inline: auto;
     padding-inline: 40px;
   }
 
-  /* 3 cards visibles, ancho 300–360px */
   .reviews .reviews__grid .review {
     flex: 0 0 calc((100% - 40px) / 3);
     min-width: 300px;
     max-width: 360px;
   }
 
-  /* ── VIVE LAURELES — alineación horizontal correcta ── */
+  /* VIVE LAURELES — 3 cards visibles */
   .vive .container {
     max-width: 1100px;
     margin-inline: auto;
     padding-inline: 32px;
   }
 
-  /* 3 cards visibles uniformes, sin comprimir */
   .vive .vive__grid .vive__card {
     flex: 0 0 calc((100% - 48px) / 3);
     aspect-ratio: 4 / 3;
     max-height: none;
+    min-width: 0;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   TABLET (562px – 1023px) — el rango problemático
+───────────────────────────────────────────── */
+@media (min-width: 562px) and (max-width: 1023px) {
+
+  /* BENEFICIOS — 2 x 2 */
+  .laureles .laureles__grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px;
+    max-width: 640px;
+    margin-inline: auto;
+  }
+
+  /* PROPIEDADES — 2 columnas */
+  .properties .properties__grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px;
+    max-width: 720px;
+    margin-inline: auto;
+  }
+
+  /* Centrar la última card cuando el total es impar (queda sola en su fila) */
+  .properties .properties__grid>.property-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc((100% - 20px) / 2);
+  }
+
+  /* REVIEWS — 2 cards visibles, sin comprimir */
+  .reviews .reviews__container {
+    max-width: 100%;
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+
+  .reviews .reviews__grid {
+    gap: 20px;
+  }
+
+  .reviews .reviews__grid .review {
+    flex: 0 0 calc((100% - 20px) / 2) !important;
+    min-width: 0;
+    max-width: none;
+  }
+
+  /* VIVE LAURELES — 2 cards visibles, proporción correcta */
+  .vive .container {
+    max-width: 100%;
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+
+  .vive .vive__grid {
+    gap: 20px;
+  }
+
+  .vive .vive__grid .vive__card {
+    flex: 0 0 calc((100% - 20px) / 2) !important;
+    aspect-ratio: 4 / 3;
+    max-height: none !important;
+    min-width: 0;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   MOBILE (≤ 561px)
+───────────────────────────────────────────── */
+@media (max-width: 561px) {
+
+  /* BENEFICIOS — 1 columna */
+  .laureles .laureles__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* PROPIEDADES — 1 columna */
+  .properties .properties__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* REVIEWS — 1 card */
+  .reviews .reviews__grid .review {
+    flex: 0 0 85%;
+  }
+
+  /* VIVE LAURELES — 1 card visible (con hint) */
+  .vive .vive__grid .vive__card {
+    flex: 0 0 80%;
   }
 }
